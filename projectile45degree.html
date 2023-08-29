@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Projectile Elevation 45 Degrees</title>
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  background-color: #f0f0f0;
+}
+
+.projectile {
+  width: 20px;
+  height: 20px;
+  background-color: #ff0000;
+  border-radius: 50%;
+  position: absolute;
+  bottom: 0;
+  animation: projectileMotion 3s linear infinite;
+}
+
+@keyframes projectileMotion {
+  0% {
+    left: 0;
+    bottom: 0;
+    transform: translateX(0);
+  }
+  100% {
+    left: calc(100% - 20px);
+    bottom: 50%;
+    transform: translateY(-50%);
+  }
+  
+}
+
+  </style>
+</head>
+<body>
+  <div class="projectile"></div>
+</body>
+</html>
