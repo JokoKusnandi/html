@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>Solar Eclipse ☀️</title>
+  <link rel="stylesheet" href="./style.css">
+<style>
+html {
+  height: 100%;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  animation: colorchange 5s infinite linear;
+}
+
+.container {
+  position: relative;
+  width: 150px;
+  height: 150px;
+}
+
+.moon, .sun {
+  position: absolute;
+  top: 0;
+  width: 150px;
+  height: 150px;
+  border-radius: 100%;
+}
+
+.sun {
+  background: #FEAD03;
+}
+
+.moon {
+  background: #000;
+  animation: time 5s infinite linear, colorchange 5s infinite linear;
+}
+
+@keyframes colorchange {
+  0% {
+    background: #fff;
+  }
+  50% {
+    background: #000;
+  }
+  100% {
+    background: #fff;
+  }
+}
+
+@keyframes time {
+  0% {
+    left: 160px;
+  }
+  100% {
+    left: -160px;
+  }
+}
+</style>
+</head>
+<body>
+
+<div class="container">
+  <div class="sun"></div>
+  <div class="moon"></div>
+</div>
+
+  
+</body>
+</html>
